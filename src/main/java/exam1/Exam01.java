@@ -67,12 +67,17 @@ public class Exam01 {
             scoreB = "Forty";
         }
 
-        if(A_win == 4 && A_win>B_win){
+        if(A_win >= 4 && A_win>B_win && A_win-B_win > 1){
             return "Win for Player A";
         }
-        if(B_win == 4 && B_win>A_win){
-
+        else if(A_win >= 4 && A_win>B_win && A_win-B_win == 1){
+            return "Advantage Player A";
+        }
+        if(B_win >= 4 && B_win>A_win && B_win-A_win > 1){
             return "Win for Player B";
+        }
+        else if(B_win >= 4 && B_win>A_win && B_win-A_win ==1){
+            return "Advantage Player B";
         }
 
 
