@@ -40,6 +40,9 @@ public class Exam01 {
         if(B_win == 2){
             return "Love-Thirty";
         }
+        if(B_win == 3){
+            return "Love-Forty";
+        }
         return "Love-All";
     }
 
