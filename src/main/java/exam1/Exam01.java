@@ -21,6 +21,12 @@ public class Exam01 {
 
     public String getScore() {
 
+        String scoreA = "";
+        String scoreB = "";
+
+        if(A_win == 0 && B_win == 0){
+            return "Love-All";
+        }
 
         if(A_win == 1 && B_win == 1){
             return "Fifteen-All";
@@ -31,33 +37,47 @@ public class Exam01 {
         else if(A_win == 3 && B_win == 3){
             return "Deuce";
         }
+        else if(A_win == 4 && B_win == 4){
+            return "Deuce";
+        }
+
+        if(A_win == 0){
+            scoreA = "Love";
+        }
         else if(A_win == 1){
-            return "Fifteen-Love";
+            scoreA = "Fifteen";
         }
         else if(A_win == 2){
-            return "Thirty-Love";
+            scoreA = "Thirty";
         }
-        else if(A_win == 3){
-            return "Forty-Love";
+        else if (A_win == 3){
+            scoreA = "Forty";
         }
-        else if(A_win == 4){
-            return "Win for Player A";
+
+        if(B_win == 0){
+            scoreB = "Love";
         }
         else if(B_win == 1){
-            return "Love-Fifteen";
+            scoreB = "Fifteen";
         }
         else if(B_win == 2){
-            return "Love-Thirty";
+            scoreB = "Thirty";
         }
-        else if(B_win == 3){
-            return "Love-Forty";
+        else if (B_win == 3){
+            scoreB = "Forty";
         }
-        else if(B_win == 4){
+
+        if(A_win == 4 && A_win>B_win){
+            return "Win for Player A";
+        }
+        if(B_win == 4 && B_win>A_win){
+
             return "Win for Player B";
         }
 
 
-        return "Love-All";
+        return scoreA + "-" + scoreB;
+
     }
 
 }
