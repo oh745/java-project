@@ -2,27 +2,30 @@ package exam1;
 
 public class Exam01 {
 
-    boolean A_win ;
-    boolean B_win ;
+    int A_win ;
+    int B_win ;
 
     public Exam01(String firstPerson, String secondPerson) {
-        A_win = false;
-        B_win = false;
+        A_win = 0;
+        B_win = 0;
     }
 
 
     public void playerAWin() {
-        A_win = true;
+        A_win++;
     }
 
     public void playerBWin() {
-        B_win = true;
+        B_win++;
     }
 
     public String getScore() {
 
-        if(A_win){
+        if(A_win == 1){
             return "Fifteen-Love";
+        }
+        if(A_win == 2){
+            return "Thirty-Love";
         }
         return "Love-All";
     }
