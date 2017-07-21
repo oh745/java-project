@@ -22,7 +22,13 @@ public class Exam01 {
     public String getScore() {
 
 
-        if(A_win == 1){
+        if(A_win == 1 && B_win == 1){
+            return "Fifteen-All";
+        }
+        else if(A_win == 2 && B_win == 2){
+            return "Thirty-All";
+        }
+        else if(A_win == 1){
             return "Fifteen-Love";
         }
         else if(A_win == 2){
