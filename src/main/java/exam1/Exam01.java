@@ -41,31 +41,7 @@ public class Exam01 {
             return "Deuce";
         }
 
-        if(A_win == 0){
-            scoreA = "Love";
-        }
-        else if(A_win == 1){
-            scoreA = "Fifteen";
-        }
-        else if(A_win == 2){
-            scoreA = "Thirty";
-        }
-        else if (A_win == 3){
-            scoreA = "Forty";
-        }
-
-        if(B_win == 0){
-            scoreB = "Love";
-        }
-        else if(B_win == 1){
-            scoreB = "Fifteen";
-        }
-        else if(B_win == 2){
-            scoreB = "Thirty";
-        }
-        else if (B_win == 3){
-            scoreB = "Forty";
-        }
+    
 
         if(A_win >= 4 && A_win>B_win && A_win-B_win > 1){
             return "Win for Player A";
@@ -80,7 +56,19 @@ public class Exam01 {
             return "Advantage Player B";
         }
 
+        switch (A_win){
+            case 0: scoreA = "Love"; break;
+            case 1:scoreA = "Fifteen"; break;
+            case 2:scoreA = "Thirty"; break;
+            case 3:scoreA = "Forty"; break;
 
+        }
+        switch (B_win){
+            case 0: scoreB = "Love"; break;
+            case 1:scoreB = "Fifteen"; break;
+            case 2:scoreB = "Thirty"; break;
+            case 3:scoreB = "Forty"; break;
+        }
         return scoreA + "-" + scoreB;
 
     }
