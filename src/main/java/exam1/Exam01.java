@@ -30,6 +30,9 @@ public class Exam01 {
         if(A_win == 3){
             return "Forty-Love";
         }
+        if(A_win == 4){
+            return "Win for Player A";
+        }
         return "Love-All";
     }
 
