@@ -3,6 +3,7 @@ package exam1;
 public class Exam01 {
 
     public Exam01(String firstPerson, String secondPerson) {
+
     }
 
 
@@ -13,7 +14,7 @@ public class Exam01 {
     }
 
     public String getScore() {
-        return null;
+        return "Love-All";
     }
 
 }
