@@ -2,12 +2,16 @@ package exam1;
 
 public class Exam01 {
 
+    String firstPerson;
+    String secondPerson;
     int A_win ;
     int B_win ;
 
     public Exam01(String firstPerson, String secondPerson) {
         A_win = 0;
         B_win = 0;
+        this.firstPerson = firstPerson;
+        this.secondPerson = secondPerson;
     }
 
 
@@ -41,19 +45,19 @@ public class Exam01 {
             return "Deuce";
         }
 
-    
+
 
         if(A_win >= 4 && A_win>B_win && A_win-B_win > 1){
-            return "Win for Player A";
+            return "Win for " + firstPerson;
         }
         else if(A_win >= 4 && A_win>B_win && A_win-B_win == 1){
-            return "Advantage Player A";
+            return "Advantage " + firstPerson;
         }
         if(B_win >= 4 && B_win>A_win && B_win-A_win > 1){
-            return "Win for Player B";
+            return "Win for " + secondPerson;
         }
         else if(B_win >= 4 && B_win>A_win && B_win-A_win ==1){
-            return "Advantage Player B";
+            return "Advantage " + secondPerson;
         }
 
         switch (A_win){
