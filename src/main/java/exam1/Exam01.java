@@ -21,31 +21,36 @@ public class Exam01 {
 
     public String getScore() {
 
-        if(A_win == 1){
+
+        if(A_win == 1 && B_win == 1){
+            return "Fifteen-All";
+        }
+        else if(A_win == 1){
             return "Fifteen-Love";
         }
-        if(A_win == 2){
+        else if(A_win == 2){
             return "Thirty-Love";
         }
-        if(A_win == 3){
+        else if(A_win == 3){
             return "Forty-Love";
         }
-        if(A_win == 4){
+        else if(A_win == 4){
             return "Win for Player A";
         }
-
-        if(B_win == 1){
+        else if(B_win == 1){
             return "Love-Fifteen";
         }
-        if(B_win == 2){
+        else if(B_win == 2){
             return "Love-Thirty";
         }
-        if(B_win == 3){
+        else if(B_win == 3){
             return "Love-Forty";
         }
-        if(B_win == 4){
+        else if(B_win == 4){
             return "Win for Player B";
         }
+
+
         return "Love-All";
     }
 
