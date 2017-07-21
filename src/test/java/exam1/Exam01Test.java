@@ -6,6 +6,21 @@ import static org.junit.Assert.assertEquals;
 
 public class Exam01Test {
     Exam01 exam01 = new Exam01("Player A", "Player B");
+    Exam01 exam02 = new Exam01("Nadal","Federer");
+
+    @Test
+    public void Nadal_win() {
+        exam02.playerAWin();
+        exam02.playerBWin();
+        exam02.playerAWin();
+        exam02.playerAWin();
+        exam02.playerAWin();
+        String actualResult = exam02.getScore();
+        assertEquals("Win for Nadal", actualResult);
+    }
+
+
+
 
     @Test
     public void start_game_should_love_all() {
