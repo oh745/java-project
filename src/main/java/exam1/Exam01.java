@@ -28,6 +28,9 @@ public class Exam01 {
         else if(A_win == 2 && B_win == 2){
             return "Thirty-All";
         }
+        else if(A_win == 3 && B_win == 3){
+            return "Deuce";
+        }
         else if(A_win == 1){
             return "Fifteen-Love";
         }
