@@ -23,30 +23,29 @@ public class Exam01 {
         B_win++;
     }
 
+    public boolean isDeuce(int score_playerA, int score_playerB){
+
+        if(score_playerA == score_playerB){
+            return true;
+        }
+        return false;
+    }
+
     public String getScore() {
 
         String scoreA = "";
         String scoreB = "";
 
-        if(A_win == 0 && B_win == 0){
-            return "Love-All";
+        if(isDeuce(A_win,B_win)){
+            switch (A_win){
+                case 0:return "Love-All";
+                case 1:return "Fifteen-All";
+                case 2:return "Thirty-All";
+                case 3:
+                case 4:return "Deuce";
+            }
         }
-
-        if(A_win == 1 && B_win == 1){
-            return "Fifteen-All";
-        }
-        else if(A_win == 2 && B_win == 2){
-            return "Thirty-All";
-        }
-        else if(A_win == 3 && B_win == 3){
-            return "Deuce";
-        }
-        else if(A_win == 4 && B_win == 4){
-            return "Deuce";
-        }
-
-
-
+        
         if(A_win >= 4 && A_win>B_win && A_win-B_win > 1){
             return "Win for " + firstPerson;
         }
